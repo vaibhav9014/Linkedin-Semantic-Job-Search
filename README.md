@@ -41,18 +41,8 @@ Upload a resume. Get ranked, LinkedIn-published job matches with explainable ski
 
 🚧 **Live demo coming soon.**
 
-Add a screenshot or short GIF here after running the app:
-
-```text
-docs/screenshots/upload.png
-docs/screenshots/results.png
-docs/screenshots/skill-gap.png
-```
-
-```markdown
-
-
-```
+![Upload screen](docs/upload.png)
+![Ranked matches](docs/results.png)
 
 ## Project Goal
 
