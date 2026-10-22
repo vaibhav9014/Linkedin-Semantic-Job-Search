@@ -1,0 +1,44 @@
+services:
+  - type: web
+    name: semantic-job-match-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn api.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.0
+      - key: JSEARCH_API_KEY
+        sync: false
+      - key: JSEARCH_BASE_URL
+        value: https://jsearch.p.rapidapi.com/search-v2
+      - key: JSEARCH_AUTH_HEADER
+        value: x-rapidapi-key
+      - key: JSEARCH_COUNTRY
+        value: us
+      - key: JSEARCH_DATE_POSTED
+        value: all
+      - key: JSEARCH_DEFAULT_LOCATION
+        value: United States
+      - key: LINKEDIN_CLIENT_ID
+        sync: false
+      - key: LINKEDIN_CLIENT_SECRET
+        sync: false
+      - key: LINKEDIN_REDIRECT_URI
+        sync: false
+      - key: APP_SECRET_KEY
+        sync: false
+      - key: FRONTEND_URL
+        sync: false
+      - key: CORS_ORIGINS
+        sync: false
+      - key: JOBS_DB_PATH
+        value: /data/jobs.sqlite3
+      - key: AUTH_COOKIE_SECURE
+        value: "true"
+      - key: AUTH_COOKIE_SAMESITE
+        value: "none"
+    disk:
+      name: live-job-data
+      mountPath: /data
+      sizeGB: 1

@@ -1,0 +1,71 @@
+/* ─── Design tokens ──────────────────────────────────────────────
+   Palette: deep ink navy + warm amber signal accent.
+   Avoids the generic near-black + acid-green AI-tool look.
+   Type: Newsreader (display serif, characterful but restrained),
+   Inter (body/UI), IBM Plex Mono (scores/data — reinforces that
+   this is real model output, not marketing copy).
+------------------------------------------------------------------ */
+:root {
+  --ink-950: #0B1320;
+  --ink-900: #111B2E;
+  --ink-800: #182438;
+  --ink-700: #233048;
+  --ink-600: #324162;
+  --ink-400: #6B7C9C;
+  --ink-200: #C3CBDC;
+  --paper-50: #F7F5F0;
+
+  --amber-500: #E8A33D;
+  --amber-400: #F0B85F;
+  --amber-glow: rgba(232, 163, 61, 0.18);
+
+  --green-500: #5FAE82;
+  --green-glow: rgba(95, 174, 130, 0.15);
+
+  --font-display: 'Newsreader', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'SF Mono', monospace;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--ink-950);
+  color: var(--paper-50);
+  font-family: var(--font-body);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+}
+
+::selection {
+  background: var(--amber-glow);
+}
+
+/* Reduced motion respect */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--amber-400);
+  outline-offset: 2px;
+}

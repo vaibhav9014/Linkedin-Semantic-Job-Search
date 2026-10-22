@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+dist/
+.eggs/
+
+# Environment
+.env
+.env.local
+*.env
+!.env.example
+!.env.*.example
+
+# Data & model artifacts (large files)
+data/raw/
+data/processed/
+data/index/
+data/*.sqlite3
+*.pt
+*.bin
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test
+.pytest_cache/
+.coverage
+htmlcov/
+archive 2/

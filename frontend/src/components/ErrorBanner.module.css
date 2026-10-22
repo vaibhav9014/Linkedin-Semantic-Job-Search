@@ -1,0 +1,37 @@
+.banner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(224, 133, 133, 0.1);
+  border: 1px solid rgba(224, 133, 133, 0.3);
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+}
+
+.icon {
+  color: #E08585;
+  flex-shrink: 0;
+}
+
+.message {
+  flex: 1;
+  font-size: 13.5px;
+  color: var(--paper-50);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.dismiss {
+  background: none;
+  border: none;
+  color: var(--ink-400);
+  cursor: pointer;
+  font-size: 13px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.dismiss:hover {
+  color: var(--paper-50);
+}

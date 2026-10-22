@@ -1,0 +1,132 @@
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px 24px 100px;
+}
+
+.header {
+  margin-bottom: 48px;
+}
+
+.account {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 36px;
+  margin-bottom: 12px;
+  color: var(--ink-400);
+  font-size: 13px;
+}
+
+.signIn {
+  padding: 8px 12px;
+  color: var(--paper-50);
+  border: 1px solid var(--ink-700);
+  border-radius: var(--radius-sm);
+  background: var(--ink-900);
+  cursor: pointer;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+  background: var(--ink-900);
+  border: 1px solid var(--ink-700);
+  border-radius: var(--radius-md);
+}
+
+.searchQueries {
+  margin: -12px 0 20px;
+  color: var(--ink-400);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.filters label {
+  display: flex;
+  flex: 1 1 180px;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--ink-400);
+  font-size: 12px;
+}
+
+.filters input,
+.filters select {
+  min-height: 38px;
+  padding: 7px 9px;
+  color: var(--paper-50);
+  background: var(--ink-800);
+  border: 1px solid var(--ink-700);
+  border-radius: var(--radius-sm);
+  font: inherit;
+}
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber-400);
+  margin: 0 0 18px 0;
+}
+
+.headline {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--paper-50);
+  margin: 0 0 20px 0;
+}
+
+.subhead {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: var(--ink-200);
+  max-width: 540px;
+  margin: 0;
+}
+
+.main {
+  min-height: 300px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.empty {
+  font-size: 14px;
+  color: var(--ink-400);
+  text-align: center;
+  padding: 40px 0;
+}
+
+.footer {
+  margin-top: 80px;
+  padding-top: 24px;
+  border-top: 1px solid var(--ink-800);
+}
+
+.footer p {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--ink-600);
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 48px 18px 80px;
+  }
+  .headline {
+    font-size: 32px;
+  }
+}

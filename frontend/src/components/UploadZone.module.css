@@ -1,0 +1,73 @@
+.wrapper {
+  width: 100%;
+}
+
+.zone {
+  border: 1px dashed var(--ink-600);
+  border-radius: var(--radius-lg);
+  background: var(--ink-900);
+  padding: 56px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.zone:hover {
+  border-color: var(--ink-400);
+  background: var(--ink-800);
+}
+
+.zone.dragging {
+  border-color: var(--amber-500);
+  background: var(--amber-glow);
+}
+
+.zone.disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.icon {
+  color: var(--ink-400);
+  margin-bottom: 16px;
+}
+
+.zone.dragging .icon {
+  color: var(--amber-400);
+}
+
+.primaryText {
+  font-size: 15px;
+  color: var(--paper-50);
+  margin: 0 0 4px 0;
+}
+
+.link {
+  color: var(--amber-400);
+  text-decoration: underline;
+  text-decoration-color: var(--amber-glow);
+}
+
+.secondaryText {
+  font-size: 13px;
+  color: var(--ink-400);
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.hiddenInput {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.errorText {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #E08585;
+}
